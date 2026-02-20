@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/1b425894c2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -20,6 +21,30 @@
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
+
+          <button class="btn__menu" onClick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onClick="closeMenu()">
+              <i class="fa-solid fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onClick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#featured" class="menu__link" onClick="closeMenu()"
+                  >Books</a
+                >
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link no-cursor" onClick="closeMenu()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <header>
@@ -29,7 +54,9 @@
             <h2>
               Find your dream book with <span class="purple">Library</span>
             </h2>
-            <button class="btn">Browse books</button>
+            <a href="#featured">
+              <button class="btn">Browse books</button>
+            </a>
           </div>
           <figure class="header__img--wrapper">
             <img src="./assets/Undraw_Books.svg" alt="" />
@@ -288,6 +315,38 @@
           </div>
         </div>
       </section>
+      <section id="explore">
+        <div class="container">
+          <div class="row row__column">
+            <h2 class="section__title">
+              Explore more <span class="purple">Books</span>
+            </h2>
+            <a href="#featured"><button class="btn">Browse books</button></a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="#">
+            <figure class="footer__logo">
+              <img
+                src="./assets/Library.svg"
+                alt=""
+                class="footer__logo--img"
+              />
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="" class="footer__link">Home</a>
+            <a href="" class="footer__link">About</a>
+            <a href="" class="footer__link">Books</a>
+            <a href="" class="footer__link no-cursor">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright © 2026 Library</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
